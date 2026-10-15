@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Left Animation Right Details</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0a0a0f;
+    font-family:'Syne',sans-serif;
+    overflow:hidden;
+    min-height:100vh;
+    color:#fff;
+}
+
+/* MAIN LAYOUT */
+
+.main{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:40px 80px;
+    gap:40px;
+}
+
+/* LEFT SIDE ANIMATION */
+
+.animation-side{
+    width:60%;
+    position:relative;
+    height:850px;
+}
+
+/* RIGHT SIDE DETAILS */
+
+.details{
+    width:40%;
+    z-index:10;
+}
+
+.subtitle{
+    color:#00f5c4;
+    font-size:.9rem;
+    letter-spacing:3px;
+    margin-bottom:18px;
+    font-family:'Space Mono', monospace;
+}
+
+.title{
+    font-size:4rem;
+    line-height:1.1;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.title span{
+    color:#00f5c4;
+}
+
+.desc{
+    color:#b5b5c3;
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 34px;
+    background:#00f5c4;
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 30px rgba(0,245,196,.5);
+}
+
+/* GLOW */
+
+.glow{
+    position:absolute;
+    width:550px;
+    height:550px;
+    background:radial-gradient(circle, rgba(0,245,196,.15), transparent 70%);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* CENTER IMAGE */
+
+.center-box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:420px;
+    height:260px;
+    transform:translate(-50%,-50%);
+    border-radius:24px;
+    overflow:hidden;
+    border:5px solid #00f5c4;
+    z-index:10;
+    background:#111;
+    box-shadow:0 0 45px rgba(0,245,196,.5);
+}
+
+.center-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ORBIT */
+
+.orbit{
+    position:absolute;
+    width:100%;
+    height:100%;
+    animation:rotateOrbit 20s linear infinite;
+}
+
+@keyframes rotateOrbit{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* PHOTO */
+
+.photo{
+    position:absolute;
+    width:180px;
+    height:120px;
+    border-radius:18px;
+    overflow:hidden;
+    border:3px solid #222;
+    background:#111;
+    transition:all 1s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,.5);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    /* KEEP IMAGE STRAIGHT */
+    animation:keepStraight 20s linear infinite;
+}
+
+@keyframes keepStraight{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(-360deg);
+    }
+
+}
+
+/* POSITIONS */
+
+.p1{
+    top:50px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.p2{
+    top:220px;
+    right:40px;
+}
+
+.p3{
+    bottom:220px;
+    right:40px;
+}
+
+.p4{
+    bottom:50px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.p5{
+    bottom:220px;
+    left:40px;
+}
+
+.p6{
+    top:220px;
+    left:40px;
+}
+
+/* ACTIVE PHOTO */
+
+.photo.active{
+    top:50% !important;
+    left:50% !important;
+    width:420px;
+    height:260px;
+    transform:translate(-50%,-50%) scale(1.03) !important;
+    z-index:50;
+    border:5px solid #00f5c4;
+    box-shadow:0 0 50px rgba(0,245,196,.6);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .main{
+        flex-direction:column;
+        padding:40px 20px;
+    }
+
+    .details,
+    .animation-side{
+        width:100%;
+    }
+
+    .title{
+        font-size:2.8rem;
+    }
+
+    .animation-side{
+        height:700px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- LEFT SIDE ANIMATION -->
+
+    <div class="animation-side">
+
+        <div class="glow"></div>
+
+        <!-- CENTER IMAGE -->
+
+        <div class="center-box">
+            <img id="centerImage"
+            src="https://picsum.photos/id/1011/900/600">
+        </div>
+
+        <!-- ORBIT -->
+
+        <div class="orbit">
+
+            <div class="photo p1">
+                <img src="https://picsum.photos/id/1011/900/600">
+            </div>
+
+            <div class="photo p2">
+                <img src="https://picsum.photos/id/1012/900/600">
+            </div>
+
+            <div class="photo p3">
+                <img src="https://picsum.photos/id/1015/900/600">
+            </div>
+
+            <div class="photo p4">
+                <img src="https://picsum.photos/id/1016/900/600">
+            </div>
+
+            <div class="photo p5">
+                <img src="https://picsum.photos/id/1025/900/600">
+            </div>
+
+            <div class="photo p6">
+                <img src="https://picsum.photos/id/1027/900/600">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE DETAILS -->
+
+    <div class="details">
+
+        <div class="subtitle">
+            MODERN GALLERY
+        </div>
+
+        <h1 class="title">
+            Circular <span>Photo</span><br>
+            Animation
+        </h1>
+
+        <p class="desc">
+            Smooth circular motion with modern futuristic
+            design. Photos continuously rotate clockwise
+            while one image moves beautifully to the center
+            with glowing animation effects.
+        </p>
+
+        <a href="#" class="btn">
+            Explore More
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+const photos = document.querySelectorAll('.photo');
+const centerImage = document.getElementById('centerImage');
+
+let current = 0;
+
+function animateCenterPhoto(){
+
+    photos.forEach(photo=>{
+        photo.classList.remove('active');
+    });
+
+    photos[current].classList.add('active');
+
+    const img = photos[current]
+    .querySelector('img').src;
+
+    setTimeout(()=>{
+        centerImage.src = img;
+    },400);
+
+    current++;
+
+    if(current >= photos.length){
+        current = 0;
+    }
+
+}
+
+animateCenterPhoto();
+
+setInterval(animateCenterPhoto, 3000);
+
+</script>
+
+</body>
+</html>

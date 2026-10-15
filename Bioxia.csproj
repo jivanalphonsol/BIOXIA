@@ -1,0 +1,769 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A8B15E6-5AF9-49F5-AA3E-83EE9180A2F5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bioxia</RootNamespace>
+    <AssemblyName>Bioxia</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44307</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.Bson.1.0.3\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="Addblog.aspx" />
+    <Content Include="Add_product_cateloge.aspx" />
+    <Content Include="Advertisement.aspx" />
+    <Content Include="anaerobic_workstation.aspx" />
+    <Content Include="aspnet_client\system_web\4_0_30319\1d51f987-927f-48ac-b996-1f321c0320e1.php" />
+    <Content Include="aspnet_client\system_web\4_0_30319\41407902-6d5b-4377-a29f-baf3cea37787.aspx" />
+    <Content Include="aspnet_client\system_web\4_0_30319\521e996a-0d4e-4d7f-88a6-bbc3cabe3893.php" />
+    <Content Include="aspnet_client\system_web\4_0_30319\f264c9b6-684a-4696-95a8-e58ce008f330.aspx" />
+    <Content Include="assets\css\leadgeneration.css" />
+    <Content Include="assets\css\SliderImages.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\img\about.jpg" />
+    <Content Include="assets\img\anaerobic_jarfilling_icon.png" />
+    <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\microbiology_icon.png" />
+    <Content Include="assets\img\micrworkstation_icon.png" />
+    <Content Include="assets\img\physoxiar_icon.png" />
+    <Content Include="assets\img\portfolio\A300.jpg" />
+    <Content Include="assets\img\portfolio\A500.jpg" />
+    <Content Include="assets\img\portfolio\A800.jpg" />
+    <Content Include="assets\img\portfolio\C1.jpg" />
+    <Content Include="assets\img\portfolio\H300.jpg" />
+    <Content Include="assets\img\portfolio\H500.jpg" />
+    <Content Include="assets\img\portfolio\H800.jpg" />
+    <Content Include="assets\img\portfolio\JarFilling.jpg" />
+    <Content Include="assets\img\portfolio\M300.jpg" />
+    <Content Include="assets\img\portfolio\M500.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-1.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-2.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-3.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-4.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-5.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-6.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-7.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-8.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-9.jpg" />
+    <Content Include="assets\img\portfolio\stomacher_1.jpg" />
+    <Content Include="assets\img\portfolio\stomacher_2.jpg" />
+    <Content Include="assets\img\portfolio\stomacher_3.jpg" />
+    <Content Include="assets\img\portfolio\stomacher_4.jpg" />
+    <Content Include="assets\img\portfolio\UV.jpg" />
+    <Content Include="assets\img\portfolio\*.*" />
+    <Content Include="assets\img\slide\*.png" />
+    <Content Include="assets\img\Client_IMG\*.*" />
+    <Content Include="assets\img\Picture.png" />
+    <Content Include="assets\img\Picture1.png" />
+    <Content Include="assets\img\Picture2.png" />
+    <Content Include="assets\img\stomacher_icon.png" />
+    <Content Include="assets\img\team\team-1.jpg" />
+    <Content Include="assets\img\team\team-2.jpg" />
+    <Content Include="assets\img\uv_viewing_icon.png" />
+    <Content Include="assets\img\WhatsApp Video 2021-07-25 at 10.24.17 PM.mp4" />
+    <Content Include="assets\img\WhatsApp Video 2021-07-25 at 10.24.26 PM.mp4" />
+    <Content Include="assets\img\WhatsApp Video 2021-07-25 at 10.24.35 PM.mp4" />
+    <Content Include="assets\img\WhatsApp Video 2021-07-25 at 10.24.36 PM.mp4" />
+    <Content Include="assets\img\WhatsApp Video 2021-07-25 at 10.24.37 PM.mp4" />
+    <Content Include="assets\js\leadgeneration.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\vendor\animate.css\animate.css" />
+    <Content Include="assets\vendor\animate.css\animate.min.css" />
+    <Content Include="assets\vendor\aos\aos.css" />
+    <Content Include="assets\vendor\aos\aos.js" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\boxicons\css\animations.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="assets\vendor\counterup\counterup.min.js" />
+    <Content Include="assets\vendor\icofont\icofont.min.css" />
+    <Content Include="assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="assets\vendor\jquery-sticky\jquery.sticky.js" />
+    <Content Include="assets\vendor\jquery.easing\jquery.easing.min.js" />
+    <Content Include="assets\vendor\jquery\jquery.min.js" />
+    <Content Include="assets\vendor\venobox\venobox.css" />
+    <Content Include="assets\vendor\venobox\venobox.js" />
+    <Content Include="assets\vendor\venobox\venobox.min.js" />
+    <Content Include="assets\vendor\waypoints\jquery.waypoints.min.js" />
+    <Content Include="Blog.aspx" />
+    <Content Include="Blog_IMG\Anaerobic Workstations in.png" />
+    <Content Include="Blog_IMG\Bioxia Microaerophilic.png" />
+    <Content Include="Blog_IMG\Blog1_Title_IMG.png" />
+    <Content Include="Blog_IMG\FAQ.png" />
+    <Content Include="Blog_IMG\LabSafety1.png" />
+    <Content Include="Blog_IMG\Modern Research Applications.png" />
+    <Content Include="Blog_IMG\Modern Research Applications1.png" />
+    <Content Include="Blog_IMG\slide-8.png" />
+    <Content Include="Captcha.aspx" />
+    <Content Include="catalogPdf1.aspx" />
+    <Content Include="Chatbot\ChatBot.ashx" />
+    <Content Include="chamber.aspx" />
+    <Content Include="CheckLeads\Login.aspx" />
+    <Content Include="CheckLeads\Logout.aspx" />
+    <Content Include="CheckLeads\ViewGeneratedLeads.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="DBlog.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="ErrorFile\ErrorFile_01_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_01_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_01_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_01_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_01_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_01_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_01_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_02_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_02_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_02_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_02_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_02_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_02_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_03_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_04_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_04_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_04_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_04_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_04_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_01_2025.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_05_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_06_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_06_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_06_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_06_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_06_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_06_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_07_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_08_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_09_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_09_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_09_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_09_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_09_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_10_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_11_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_11_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_11_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_11_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_11_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_11_2022.txt" />
+    <Content Include="ErrorFile\ErrorFile_12_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_13_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_13_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_13_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_13_10_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_14_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_14_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_14_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_14_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_14_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_14_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_14_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_15_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_16_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_16_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_16_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_16_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_16_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_16_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_10_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_17_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_18_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_18_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_18_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_18_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_18_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_18_10_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_18_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_19_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_11_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_20_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_21_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_21_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_21_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_21_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_21_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_21_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_22_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_22_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_22_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_22_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_22_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_22_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_22_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_23_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_08_2022.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_10_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_24_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_05_2022.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_25_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_10_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_26_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_10_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_27_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_28_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_28_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_28_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_28_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_28_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_28_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_02_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_09_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_29_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_01_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_04_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_05_2022.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_06_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_07_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_08_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_11_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_30_12_2023.txt" />
+    <Content Include="ErrorFile\ErrorFile_31_03_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_31_05_2024.txt" />
+    <Content Include="ErrorFile\ErrorFile_31_08_2024.txt" />
+    <Content Include="Gallary.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="infotech\css\aos.min.css" />
+    <Content Include="infotech\css\bootstrap.min.css" />
+    <Content Include="infotech\css\fontawesome-all.min.css" />
+    <Content Include="infotech\css\style.css" />
+    <Content Include="infotech\css\swiper.css" />
+    <Content Include="infotech\images\1.png" />
+    <Content Include="infotech\images\2.png" />
+    <Content Include="infotech\images\3.png" />
+    <Content Include="infotech\images\4.svg" />
+    <Content Include="infotech\images\5.png" />
+    <Content Include="infotech\images\about.jpg" />
+    <Content Include="infotech\images\contact.jpg" />
+    <Content Include="infotech\images\favicon.png" />
+    <Content Include="infotech\images\home.jpg" />
+    <Content Include="infotech\images\logo.png" />
+    <Content Include="infotech\images\make-india-logo.png" />
+    <Content Include="infotech\images\testimonial-1.jpg" />
+    <Content Include="infotech\images\testimonial-4.jpg" />
+    <Content Include="infotech\images\up-arrow.png" />
+    <Content Include="infotech\index.html" />
+    <Content Include="infotech\js\aos.js" />
+    <Content Include="infotech\js\bootstrap.min.js" />
+    <Content Include="infotech\js\purecounter.min.js" />
+    <Content Include="infotech\js\script.js" />
+    <Content Include="infotech\js\slide.js" />
+    <Content Include="infotech\js\swiper.min.js" />
+    <Content Include="infotech\privacy.html" />
+    <Content Include="infotech\terms.html" />
+    <Content Include="infotech\webfonts\fa-brands-400.svg" />
+    <Content Include="infotech\webfonts\fa-regular-400.svg" />
+    <Content Include="infotech\webfonts\fa-solid-900.svg" />
+    <Content Include="jar_filling_system.aspx" />
+    <Content Include="micro_workstation.aspx" />
+    <Content Include="physoxia_workstation.aspx" />
+    <Content Include="ProductCatlog\ANAEROBIC CUM MICROAEROPHILIC WORKSTATION M-300.pdf" />
+    <Content Include="product_pg.aspx" />
+    <Content Include="research.aspx" />
+    <Content Include="ResearchPaper1.aspx" />
+    <Content Include="research_papers.aspx" />
+    <Content Include="stomacher.aspx" />
+    <Content Include="uv_viewing.aspx" />
+    <Content Include="ViewPdf.aspx" />
+    <Content Include="View_Product_Catalog.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addblog.aspx.cs">
+      <DependentUpon>Addblog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Addblog.aspx.designer.cs">
+      <DependentUpon>Addblog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_product_cateloge.aspx.cs">
+      <DependentUpon>Add_product_cateloge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_product_cateloge.aspx.designer.cs">
+      <DependentUpon>Add_product_cateloge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Advertisement.aspx.cs">
+      <DependentUpon>Advertisement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Advertisement.aspx.designer.cs">
+      <DependentUpon>Advertisement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="anaerobic_workstation.aspx.cs">
+      <DependentUpon>anaerobic_workstation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="anaerobic_workstation.aspx.designer.cs">
+      <DependentUpon>anaerobic_workstation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogPdf1.aspx.cs">
+      <DependentUpon>catalogPdf1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogPdf1.aspx.designer.cs">
+      <DependentUpon>catalogPdf1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chamber.aspx.cs">
+      <DependentUpon>chamber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chamber.aspx.designer.cs">
+      <DependentUpon>chamber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chatbot\ChatBot.ashx.cs">
+      <DependentUpon>ChatBot.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckLeads\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckLeads\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckLeads\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckLeads\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckLeads\ViewGeneratedLeads.aspx.cs">
+      <DependentUpon>ViewGeneratedLeads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckLeads\ViewGeneratedLeads.aspx.designer.cs">
+      <DependentUpon>ViewGeneratedLeads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Captcha.aspx.cs">
+      <DependentUpon>Captcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DBlog.aspx.cs">
+      <DependentUpon>DBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DBlog.aspx.designer.cs">
+      <DependentUpon>DBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallary.aspx.cs">
+      <DependentUpon>Gallary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallary.aspx.designer.cs">
+      <DependentUpon>Gallary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jar_filling_system.aspx.cs">
+      <DependentUpon>jar_filling_system.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jar_filling_system.aspx.designer.cs">
+      <DependentUpon>jar_filling_system.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="micro_workstation.aspx.cs">
+      <DependentUpon>micro_workstation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="micro_workstation.aspx.designer.cs">
+      <DependentUpon>micro_workstation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddContent.cs" />
+    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\CommonLeadInfo.cs" />
+    <Compile Include="Models\CommonUtilities.cs" />
+    <Compile Include="Models\Connection.cs" />
+    <Compile Include="Models\DBHelper.cs" />
+    <Compile Include="Models\GetLeadDetails.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\LogoutHelper.cs" />
+    <Compile Include="Models\ProductCatalog.cs" />
+    <Compile Include="Models\ProductCatalogDO.cs" />
+    <Compile Include="Models\ProductCatalogInfo.cs" />
+    <Compile Include="physoxia_workstation.aspx.cs">
+      <DependentUpon>physoxia_workstation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="physoxia_workstation.aspx.designer.cs">
+      <DependentUpon>physoxia_workstation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.Master.cs">
+      <DependentUpon>Product.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.Master.designer.cs">
+      <DependentUpon>Product.Master</DependentUpon>
+    </Compile>
+    <Compile Include="product_pg.aspx.cs">
+      <DependentUpon>product_pg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product_pg.aspx.designer.cs">
+      <DependentUpon>product_pg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="research.aspx.cs">
+      <DependentUpon>research.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="research.aspx.designer.cs">
+      <DependentUpon>research.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResearchPaper1.aspx.cs">
+      <DependentUpon>ResearchPaper1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResearchPaper1.aspx.designer.cs">
+      <DependentUpon>ResearchPaper1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="research_papers.aspx.cs">
+      <DependentUpon>research_papers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="research_papers.aspx.designer.cs">
+      <DependentUpon>research_papers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stomacher.aspx.cs">
+      <DependentUpon>stomacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stomacher.aspx.designer.cs">
+      <DependentUpon>stomacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uv_viewing.aspx.cs">
+      <DependentUpon>uv_viewing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uv_viewing.aspx.designer.cs">
+      <DependentUpon>uv_viewing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPdf.aspx.cs">
+      <DependentUpon>ViewPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPdf.aspx.designer.cs">
+      <DependentUpon>ViewPdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Product_Catalog.aspx.cs">
+      <DependentUpon>View_Product_Catalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Product_Catalog.aspx.designer.cs">
+      <DependentUpon>View_Product_Catalog.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="assets\vendor\icofont\fonts\icofont.woff" />
+    <Content Include="assets\vendor\icofont\fonts\icofont.woff2" />
+    <Content Include="assets\vendor\jquery\jquery.min.map" />
+    <Content Include="infotech\webfonts\fa-brands-400.eot" />
+    <Content Include="infotech\webfonts\fa-brands-400.ttf" />
+    <Content Include="infotech\webfonts\fa-brands-400.woff" />
+    <Content Include="infotech\webfonts\fa-brands-400.woff2" />
+    <Content Include="infotech\webfonts\fa-regular-400.eot" />
+    <Content Include="infotech\webfonts\fa-regular-400.ttf" />
+    <Content Include="infotech\webfonts\fa-regular-400.woff" />
+    <Content Include="infotech\webfonts\fa-regular-400.woff2" />
+    <Content Include="infotech\webfonts\fa-solid-900.eot" />
+    <Content Include="infotech\webfonts\fa-solid-900.ttf" />
+    <Content Include="infotech\webfonts\fa-solid-900.woff" />
+    <Content Include="infotech\webfonts\fa-solid-900.woff2" />
+    <Content Include="aspnet_client\system_web\4_0_30319\7a3d9a4a-acab-4120-b5eb-51e53567b3db.cer" />
+    <Content Include="aspnet_client\system_web\4_0_30319\a08db5ac-299e-47d7-b9c7-73f4c030b727.cer" />
+    <Content Include="Product.Master" />
+    <Content Include="ProductCatlog\ANAEROBIC A 300 CATALOG.pdf" />
+    <Content Include="ProductCatlog\ANAEROBIC A 500 CATALOG.pdf" />
+    <Content Include="ProductCatlog\ANAEROBIC A 800 CATALOG.pdf" />
+    <Content Include="ProductCatlog\Anaerobic Cum Microaerophilic Chamber Catalogue.pdf" />
+    <Content Include="ProductCatlog\Anaerobic Jar Filling System CATALOGUE II.pdf" />
+    <Content Include="ProductCatlog\Anaerobic Jar Filling System.pdf" />
+    <Content Include="ProductCatlog\Anaerobic Workstation along with Jar Filling System.pdf" />
+    <Content Include="ProductCatlog\CUSTOMIZE ANAEROBIC WORKSTATION.pdf" />
+    <Content Include="ProductCatlog\H 300.pdf" />
+    <Content Include="ProductCatlog\HYPOXIA H-300 CATALOG.pdf" />
+    <Content Include="ProductCatlog\HYPOXIA H-500 CATALOG.pdf" />
+    <Content Include="ProductCatlog\HYPOXIA H-800 CATALOG.pdf" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">17.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != '' And Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v17.0\WebApplications\Microsoft.WebApplication.targets" Condition="!Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets') And Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v17.0\WebApplications\Microsoft.WebApplication.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v16.0\WebApplications\Microsoft.WebApplication.targets" Condition="!Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets') And Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v16.0\WebApplications\Microsoft.WebApplication.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0\WebApplications\Microsoft.WebApplication.targets" Condition="!Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets') And Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0\WebApplications\Microsoft.WebApplication.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v17.0\Web\Microsoft.Web.Publishing.targets" Condition="!Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.targets') And Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v17.0\Web\Microsoft.Web.Publishing.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v16.0\Web\Microsoft.Web.Publishing.targets" Condition="!Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.targets') And Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v16.0\Web\Microsoft.Web.Publishing.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0\Web\Microsoft.Web.Publishing.targets" Condition="!Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.targets') And Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0\Web\Microsoft.Web.Publishing.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50235</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44307/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

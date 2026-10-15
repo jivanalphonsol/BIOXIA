@@ -1,0 +1,14 @@
+New Text FileChatBot.ProcessRequest
+----------------------------16-07-2026 18:20:27--------------------------------------------------
+System.Net.WebException: The remote server returned an error: (429) Too Many Requests.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Bioxia.Chatbot.ChatBot.CallOpenAi(List`1 messages) in C:\dell_files\29-06-2026bioxia\bioxia with all change\Live Code 27042026\Live Code 27042026\Live Code\Chatbot\ChatBot.ashx.cs:line 127
+   at Bioxia.Chatbot.ChatBot.ProcessRequest(HttpContext context) in C:\dell_files\29-06-2026bioxia\bioxia with all change\Live Code 27042026\Live Code 27042026\Live Code\Chatbot\ChatBot.ashx.cs:line 77
+
+ChatBot.ProcessRequest
+----------------------------16-07-2026 18:34:58--------------------------------------------------
+System.Net.WebException: The remote server returned an error: (429) Too Many Requests.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Bioxia.Chatbot.ChatBot.CallOpenAi(List`1 messages) in C:\dell_files\29-06-2026bioxia\bioxia with all change\Live Code 27042026\Live Code 27042026\Live Code\Chatbot\ChatBot.ashx.cs:line 127
+   at Bioxia.Chatbot.ChatBot.ProcessRequest(HttpContext context) in C:\dell_files\29-06-2026bioxia\bioxia with all change\Live Code 27042026\Live Code 27042026\Live Code\Chatbot\ChatBot.ashx.cs:line 77
+

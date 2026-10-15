@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Disallow: /CheckLeads/
+Disallow: /Chatbot/
+Disallow: /Add_product_cateloge.aspx
+Disallow: /View_Product_Catalog.aspx
+Disallow: /Addblog.aspx
+Disallow: /DBlog.aspx
+Disallow: /Captcha.aspx
+Disallow: /Error.aspx
+Disallow: /ErrorFile/
+Disallow: /bin/
+Disallow: /obj/
+Disallow: /Properties/
+Disallow: /aspnet_client/
+
+Sitemap: https://www.bioxia.co.in/sitemap.xml

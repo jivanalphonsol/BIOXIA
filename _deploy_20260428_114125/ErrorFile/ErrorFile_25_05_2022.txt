@@ -1,0 +1,42 @@
+New Text FilebtnSubmit_Click
+----------------------------25-05-2022 10:55:36--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
+btnSubmit_Click
+----------------------------25-05-2022 10:55:40--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
+btnSubmit_Click
+----------------------------25-05-2022 10:55:55--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
+btnSubmit_Click
+----------------------------25-05-2022 10:55:59--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
+btnSubmit_Click
+----------------------------25-05-2022 10:56:10--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
+InsertLead
+----------------------------25-05-2022 10:57:42--------------------------------------------------
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Bioxia.Models.GetLeadDetails.InsertLead(LeadgenerationParam param) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Models\GetLeadDetails.cs:line 49
+

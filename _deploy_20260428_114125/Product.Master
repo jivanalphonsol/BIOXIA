@@ -1,0 +1,479 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Product.master.cs" Inherits="Bioxia.Product" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <%--  <title>BIOXIA</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">--%>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script async src="https://cse.google.com/cse.js?cx=f45945f0275864323">
+    </script>
+    <style>
+        #side-suggestion-button {
+            display: none;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 30%;
+            z-index: 1000;
+            display: block;
+            top: 400px;
+        }
+
+        #sidesuggestion {
+            display: none;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 400px;
+            z-index: 1000;
+        }
+
+        @media (max-width: 700px) {
+            #sidesuggestion {
+                width: 70% !important;
+                z-index: 1000;
+                display: none;
+                position: fixed;
+                left: 0;
+            }
+        }
+
+        #sidesuggestion {
+            display: none;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 30%;
+            z-index: 1000;
+        }
+
+            #sidesuggestion .dismiss {
+                display: inline-block !important;
+            }
+
+
+
+
+        .navbar-nav li {
+            padding: 0px 15px;
+        }
+
+
+        #navbarDropdown {
+            color: #007584;
+        }
+
+
+        @media (min-width: 992px) {
+            .dropdown-menu .dropdown-toggle:after {
+                border-top: .3em solid transparent;
+                border-right: 0;
+                border-bottom: .3em solid transparent;
+                border-left: .3em solid;
+            }
+
+            .dropdown-menu .dropdown-menu {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .dropdown-menu li {
+                position: relative;
+            }
+
+            .nav-item .submenu {
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: -7px;
+            }
+
+            .nav-item .submenu-left {
+                right: 100%;
+                left: auto;
+            }
+
+            .dropdown-menu > li:hover {
+                background-color: #f1f1f1;
+            }
+
+
+                .dropdown-menu > li:hover > .submenu {
+                    display: block;
+                }
+        }
+
+        @media (max-width: 767px) {
+            .dropdown-menu .dropdown-toggle:after {
+                border-top: .3em solid transparent;
+                border-right: 0;
+                border-bottom: .3em solid transparent;
+                border-left: .3em solid;
+            }
+
+            .dropdown-menu .dropdown-menu {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .dropdown-menu li {
+                position: relative;
+            }
+
+            .nav-item .submenu {
+                display: none;
+                position: absolute;
+                left: 20%;
+                top: 100%;
+            }
+
+            .nav-item .submenu-left {
+                right: 100%;
+                left: auto;
+            }
+
+            .dropdown-menu > li:hover {
+                background-color: #f1f1f1;
+            }
+
+
+                .dropdown-menu > li:hover > .submenu {
+                    display: block;
+                }
+
+            .dropdown-item:hover {
+                background-color: transparent;
+            }
+
+            .submenu li a {
+                color: black;
+            }
+
+            .dropdown-menu li a:hover {
+                color: black;
+            }
+        }
+
+     div.gsc-control-cse {
+        padding: 0 !important;
+    }
+    </style>
+  <%--  <meta name="google-site-verification" content="saaZvFELUINacleF-m2zaPwbY_DtlBWvJQQFfh17tHI" />--%>
+    <!-- =======================================================
+  * Template Name: Mamba - v2.0.1
+  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <div>
+            <!-- ======= Top Bar ======= -->
+            <%-- <section id="topbar" class="d-none d-lg-block">
+                <div class="container clearfix">
+                    <div class="contact-info float-left">
+                        <i class="icofont-envelope"></i><a href="bioxia.in@gmail.com">bioxia.in@gmail.com</a>
+                        <i class="icofont-phone"></i>+91 9833859997
+                    </div>
+                    <div class="social-links float-right">
+                        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61552545058866&is_tour_completed=true" class="facebook"><i class="icofont-facebook"></i></a>
+                        <a href="https://www.instagram.com/bioxia23/?hl=en" class="instagram"><i class="icofont-instagram"></i></a>
+
+                        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+                    </div>
+                </div>
+            </section>--%>
+            <section id="topbar" class="d-none d-lg-block">
+                <div class="container clearfix">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="contact-info float-left">
+                              <%--  <i class="icofont-envelope"></i><a href="bioxia.in@gmail.com">bioxia.in@gmail.com</a>
+                                <i class="icofont-phone"></i>+91 9833859997--%>
+                                 <i class="icofont-envelope"></i><a href="mailto:bioxia.in@gmail.com">bioxia.in@gmail.com</a>
+                                <i class="icofont-phone"></i><a href="tel:+919833859997">+91 9833859997</a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="gcse-search"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="social-links float-right">
+
+                                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61552545058866&is_tour_completed=true" class="facebook"><i class="icofont-facebook"></i></a>
+                                <a href="https://www.instagram.com/bioxia23/?hl=en" class="instagram"><i class="icofont-instagram"></i></a>
+
+                                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </section>
+
+
+
+
+            <!-- ======= Header ======= -->
+            <header id="header">
+                <div class="container">
+
+                    <div class="logo float-left">
+                        <a class="" href="Home">
+                            <img src="assets/img/logo.png" alt="Logo">
+                        </a>
+                        <!--  <h1 class="text-light"><a href="index.html"><span>BIOXIA</span></a></h1>-->
+                        <!-- Uncomment below if you prefer to use an image logo -->
+                        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                    </div>
+
+                    <%--  <nav class="nav-menu float-right d-none d-lg-block">
+                    <ul>
+                        <li><a href="Index.aspx">Home</a></li>
+                        <li><a href="Index.aspx#about">About Us</a></li>
+                        <li><a href="Index.aspx#services">Services</a></li>
+                        <li class="active"><a href="product_pg.aspx">Our Products</a></li>
+                        <li><a href="Index.aspx#productscatlog">Products Catlog</a></li>
+                        <li><a href="Index.aspx#gallery">Gallery</a></li>
+                        <li><a href="Index.aspx#contact">Contact Us</a></li>
+                    </ul>
+                </nav>--%>
+                    <nav class="nav-menu float-right d-none d-lg-block">
+                        <ul>
+                            <li><a href="Home">Home</a></li>
+                            <li><a href="Index#about">About Us</a></li>
+                            <li><a href="Index#services">Services</a></li>
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Products </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Microbiology/Microbiome &raquo</a>
+                                        <ul class="submenu dropdown-menu">
+                                           <li><a class="dropdown-item" href="Anaerobic-Workstation">Anaerobic Workstation</a></li>
+                                            <li><a class="dropdown-item" href="microaerophilic-workstations-M300-M500-M800">Microaerophilic workstation</a></li>
+                                            <li><a class="dropdown-item" href="Stomacher">Stomacher  </a></li>
+                                            <li><a class="dropdown-item" href="anaerobic-jar-filling-system">Anaerobic Jar Filling System </a></li>
+                                        
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Cancer and Stem Cell Research &raquo </a>
+                                        <ul class="submenu dropdown-menu">
+                                        
+                                              <li><a class="dropdown-item" href="hypoxic-workstations-guide">Hypoxic workstation</a></li>
+                                            <li><a class="dropdown-item" href="Cell-Culture-Chamber-CBOX">Cell Culture Chamber</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+
+                            <li><a href="Index#productscatlog">Products Catlog</a></li>
+                            <li><a href="Gallary">Gallery</a></li>
+                            <li><a href="Contact">Contact Us</a></li>
+                              <li><a href="Blog">Blog</a></li>
+                            <%--  <li><a href="CheckLeads/Login.aspx">Login</a></li>--%>
+                        </ul>
+                    </nav>
+                    <!-- .nav-menu -->
+
+                </div>
+            </header>
+            <!-- End Header -->
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <!-- End #main -->
+
+            <!-- ======= Footer ======= -->
+
+            <footer id="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-5 col-md-6 footer-info">
+                                <h3>Bioxia</h3>
+                                <p>
+                                   H7 Rajalaxmi Commercial Complex, Ground Floor, Kalher,
+                                    <br>
+                                    Tal - Bhiwandi,
+                                    <br>
+                                    Dist - Thane 421302, Maharashtra, India
+              <br>
+                                    <br>
+                                  <%--  <strong>Phone:</strong> +91 9833859997<br>
+                                    <strong>Email:</strong> bioxia.in@gmail.com
+                                    <br>
+                                    bioxiaoffice@gmail.com --%>
+                                     <strong>Phone:</strong>  <a style="color:white;" href="tel:+919833859997">+91 9833859997</a><br>
+                                    <strong>Email:</strong> <a style="color:white;" href="mailto:bioxia.in@gmail.com">bioxia.in@gmail.com</a>
+                                    <br>
+                                  <a style="color:white;" href="mailto:bioxiaoffice@gmail.com">bioxiaoffice@gmail.com</a>   
+                                </p>
+                                <div class="social-links mt-3">
+                                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=61552545058866&is_tour_completed=true" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                    <a href="https://www.instagram.com/bioxia23/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
+
+                                    <%-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>--%>
+                                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 footer-links">
+                                <h4>Useful Links</h4>
+                                <ul>
+                                   <%-- <li><i class="bx bx-chevron-right"></i><a href="Home.aspx">Home</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="Index.aspx#header#">About us</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="Index.aspx#header#">Services</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="Index.aspx#header#">Our Products</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="Index.aspx#header#">Our Gallery</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="Index.aspx#header#">Privacy policy</a></li>--%>
+                                     <li><i class="bx bx-chevron-right"></i><a href="Home">Home</a></li>
+                                      <li><i class="bx bx-chevron-right"></i><a href="index#about">About us</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="index#services">Services</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="#">Our Products</a></li>
+                                     
+                                    <li><i class="bx bx-chevron-right"></i><a href="Gallary">Our Gallery</a></li>
+                                     <li><i class="bx bx-chevron-right"></i><a href="Blog">Blog</a></li>
+                                    <li><i class="bx bx-chevron-right"></i><a href="#">Privacy policy</a></li>
+                                </ul>
+                            </div>
+
+                            <!--    <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>  -->
+
+                            <div class="col-lg-4 col-md-6 footer-newsletter">
+                               <%-- <p style="text-align: justify;">Bioxia  is one of the leading manufacturers of  Anaerobic Workstation and
+                                    Physoxia Chamber in India. Company was founded in 2015. Bioxia has been an authorized exclusive world 
+                                    class manufacturer in Life Sciences ,Clinical, Higher Education and Pharma industries. We have a team
+                                    of highly skilled, vastly experienced, motivated professionals and engineers</p>--%>
+                                <p style="text-align: justify;">Bioxia, founded in 2015, is India’s leading manufacturer of  Anaerobic Hypoxia
+                                    Workstations.  Bioxia has been an authorized exclusive world class manufacturer in Life Sciences, Clinical,
+                                    Higher Education and Pharma industries. We have a team of highly skilled, vastly experienced and motivated 
+                                    professionals.</p>
+
+                                <h4>Our Newsletter</h4>
+                                <p>Enter your Email Id</p>
+                                <form action="" method="post">
+                                    <input type="email" name="email"><input type="submit" value="Subscribe">
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>BIOXIA</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ 
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer -->
+
+            <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+            <!-- Vendor JS Files -->
+
+        </div>
+
+
+
+        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+        <script>
+            function isNumber(evt) {
+                evt = (evt) ? evt : window.event;
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    return false;
+                }
+                return true;
+            }
+
+            function OpenForm() {
+                document.getElementById("sidesuggestion").style.display = "block";
+            }
+
+            function dismissForm() {
+                document.getElementById("sidesuggestion").style.display = "";
+                document.getElementById("sidesuggestion").style.display = "dismiss";
+            }
+
+
+
+        </script>
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+        <script src="assets/vendor/venobox/venobox.min.js"></script>
+        <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+        <script src="assets/vendor/counterup/counterup.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+    </form>
+</body>
+</html>

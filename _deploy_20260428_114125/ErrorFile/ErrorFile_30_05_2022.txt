@@ -1,0 +1,18 @@
+New Text FilebtnSubmit_Click
+----------------------------30-05-2022 11:55:10--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
+btnSubmit_Click
+----------------------------30-05-2022 11:55:21--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
+btnSubmit_Click
+----------------------------30-05-2022 11:55:31--------------------------------------------------
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at Bioxia.Index.btnSubmit_Click(Object sender, EventArgs e) in D:\Arohi\BIOXIA\Bioxia\Bioxia\Index.aspx.cs:line 31
+
